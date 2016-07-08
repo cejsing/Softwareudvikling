@@ -1,10 +1,9 @@
-# Project-Cafeen
+# Projekt - Caféen?
 Softwareudvikling KU
-Første commit/push/pull
 
-
-# Medlemmer i gruppen
+# Medlem i gruppen
 - Camilla Ejsing
-- Mohammed Sami Elnono
+
+# Tidligere medlemmer i gruppen
 - Nicolai Manique
 - Søren Nissen
