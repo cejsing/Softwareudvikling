@@ -1,0 +1,24 @@
+<form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+</form> 
+
+<h2> {{event}} </h2>
+
+    {% if groupedelements %}
+    {% for element in groupedelements %}
+        <b>{{element.0}}</b> </br>
+        Id#: {{element.1}}
+        I baren: {{element.2}}
+        På lager: {{element.3}}
+        Normalpris: {{element.4}}</br>
+        Pris nu: <b>{{element.5}}</b></p></p>
+        
+    {% endfor %}
+{% endif %}
+
+
+<form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+</form> 

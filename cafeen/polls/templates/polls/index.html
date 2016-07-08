@@ -1,0 +1,160 @@
+<html>
+    <title>Caféen</title>
+    <h1>Caféen</h1>
+    
+    <h3> Optællinger </h3>
+    
+    <a href="/polls/aabenhistorik/">
+        Vis tidligere optællinger
+    </a>
+    
+    {% if allevents %}
+
+        <ul>
+        {% for event in allevents %}
+            <li>
+                <a href="/polls/Aaben/{{ event.id }}/">
+                        Åben Caféen for {{ event }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p>Man skal have en begivenhed for at kunne åbne </p>
+    {% endif %}
+    
+
+    <p/>
+    <a href="/polls/Luk/">
+        Luk Caféen
+    </a>
+    
+    <h3> Varemodtagelse </h3>
+    
+    <a href="/polls/modtagelser/ny/">
+        Foretag ny modtagelse
+    </a> </p>
+    
+    <a href="/polls/modtagelser/historik/">
+        Vis tidligere modtagelser
+    </a>
+    
+    
+    <h3> Begivenheder </h3>
+        
+    <a href="/polls/events/">
+        Se mulige begivenheder
+    </a>
+    
+    <h3> Prisændringer </h3>
+    
+    {% if allevents %}
+
+        <ul>
+        {% for event in allevents %}
+            <li>
+                <a href="/polls/prisskift/{{ event.id }}/">
+                        Ændr priser for {{ event }} (enkelte varer)
+                </a>
+            </li>
+        {% endfor %}
+        </p>
+        {% for event in allevents %}
+            <li>
+                <a href="/polls/eventpriser/{{ event.id }}/">
+                        Ændr priser for {{ event }} (varegrupper)
+                </a>
+            </li>
+        {% endfor %}
+        
+        </ul>
+    
+    {% else %}
+        <p>Der er ingen begivenheder </p>
+    {% endif %}
+    
+    <h3> Prislister </h3>
+    
+    {% if allevents %}
+
+        <ul>
+        {% for event in allevents %}
+            <li>
+                <a href="/polls/priser/{{ event.id }}/">
+                        Vis priser for {{ event }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p>Der er ingen begivenheder </p>
+    {% endif %}
+    
+    <h3> Varegrupper </h3>
+    
+    <a href="/polls/skab_varegruppe/">
+        Lav en ny varegruppe
+    </a>
+    <p/>    
+    
+    {% if allwg %}
+
+        <ul>
+        {% for wg in allwg %}
+            <li>
+                <a href="/polls/varegruppe/{{ wg.id }}/">
+                        Vis {{ wg }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p>Der er ingen varegrupper </p>
+    {% endif %}
+    
+    
+    <h3> Varer </h3>
+    
+    <a href="/polls/skab_vare/">
+        Lav en ny vare
+    </a>
+    <p/>    
+    
+    <a href="/polls/hisnavn/">
+        Vis historik for varenavne
+    </a>
+    <p/>
+    
+    <a href="/polls/hisvarepriser/">
+        Vis historik for varepriser
+    </a>
+    <p/>
+    
+    <a href="/polls/hisvareantal/">
+        Vis historik for vareantal og sletninger
+    </a>
+    <p/>
+
+    {% if allwares %}
+        Liste over varer:
+        <ul>
+        {% for ware in allwares %}
+            <li>
+                <a href="/polls/{{ ware.id }}/">
+                    {{ ware }}
+                </a>
+            </li>
+            <p> wareid#:  {{ ware.id }} </p>
+            <p> pris:  {{ ware.standardprice }} </p>
+        {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p>No wares are available.</p>
+    {% endif %}
+    
+    
+</html>

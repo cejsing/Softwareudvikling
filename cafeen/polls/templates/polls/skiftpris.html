@@ -1,0 +1,35 @@
+<title> Begivenhedspriser</title>
+
+<form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+</form> 
+
+<h1>Begivenhedspriser</h1>
+
+<h2> {{event}} </h2>
+
+<h4> Vigtigt! Tryk på change for hver ændring for at undgå datatab</h4>
+
+{% if inputlist %}
+    {% for element in inputlist %}
+        {{element.1}}: 
+        {{element.0}} skal nu koste:
+        <form method="post"">
+            {% csrf_token %}
+            
+            <input type="number" name="{{element.1}}">
+            
+            <input type="submit" value="Change"  />
+        </form> 
+        
+    {% endfor %}
+{% else %}
+    Man må ikke ændre priser for en åben bar</p>
+{% endif %}
+
+
+<form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+</form> 

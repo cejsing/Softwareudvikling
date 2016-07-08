@@ -1,0 +1,27 @@
+{% if error %}
+
+    {% for mistake in error %}
+        <b>Fejl #{{forloop.counter}}: {{mistake}}</b></p>
+    {% endfor %}
+{% else %}
+<form method="post">
+    {% csrf_token %}
+
+    Dette ændrer normalprisen for alle varer i varegruppen <b> {{waregroup}} </b> til at være følgende:</p>
+    {{form}}
+  <input type="submit" value="Change"  />
+  
+</form> 
+
+{% endif %}
+
+<form action="{% url 'polls:wgdetail' waregroup.id %}">
+  Tilbage til detaljer <br>
+  <input type="submit" value="Varegruppe"  />
+</form> 
+
+<form action="../../">
+  Tilbage til oversigt:<br>
+  <input type="submit" value="Tilbage til forsiden"  />
+</form>  
+

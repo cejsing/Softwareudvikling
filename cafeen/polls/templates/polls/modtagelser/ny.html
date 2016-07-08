@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    
+    <h3> Varemodtagelse: {{ event }} </h3> </p>
+     
+    <form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+    {% if message %}
+        <b>Beskeder fra systemet:</p></b>
+        {% for element in message %}
+            {{forloop.counter}}: {{element}}</p>
+        {% endfor %}
+    {% endif %}
+    
+    {% if allwares %}
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            {% for ware in allwares %}
+                {{ ware }}</br> 
+                wareid#:  {{ ware.id }} </br>
+
+                vælg barantal:
+                <input type="number" value="0" name="valgbar.{{ ware.id }}">
+
+                vælg lagerantal:
+                <input type="number" value="0" name="valglager.{{ ware.id }}"></p></p>
+                        
+            {% endfor %}       
+            <input type="submit" value="Change"  /><br/><p/>
+        </form>
+    {% else %}
+        <p>Ingen varer tilgængelige eller baren allerede åben.</p>
+    {% endif %} 
+
+    <style></style>
+  </head>
+  <body></body>
+</html>

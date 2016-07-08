@@ -1,0 +1,38 @@
+<title>Caféen - Varehåndtering for {{ware}}</title>
+
+<h1>{{ ware }}</h1>
+id#: {{ ware.id }} <p>
+inbar: {{ ware.inbar }} <p>
+instockroom: {{ ware.instockroom }} <p>
+standardprice: {{ ware.standardprice}} <p>
+
+Varegruppe valgt: <a href="/polls/varegruppe/{{ waregroup.id }}/"> {{waregroup}}</a>
+
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+
+
+
+
+
+<form method="post" action="{% url 'polls:detail' ware.id %}">
+
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Change"  />
+  
+</form> 
+
+<form action="{% url 'polls:waredelete' ware.id %}">
+  <p>
+  <input type="submit" value="Slet vare"  />
+  </p>  
+</form> 
+
+
+<form action="../">
+  Tilbage til oversigt:<br>
+  <input type="submit" value="Tilbage"  />
+</form> 
