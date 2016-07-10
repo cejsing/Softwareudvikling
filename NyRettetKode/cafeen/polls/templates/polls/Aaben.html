@@ -1,0 +1,36 @@
+
+    <h3> Åbning for begivenheden: {{ event }} </h3> </p>
+     
+    <form action="../../">
+        <input type="submit" value="Tilbage"  />
+    </form> 
+    {% if message %}
+            <b>Beskeder fra systemet:</b></p>
+            {% for element in message %}
+                {{forloop.counter}}: {{element}}</p>
+            {% endfor %}
+    {% else %}
+        {% if allwares %}
+            <form method="post" enctype="multipart/form-data">
+                {% for ware in allwares %}
+                {{ ware }}</br> 
+                VareID #{{ ware.id }} </br>
+                Pris:  {{ eventpris }}kr. </br>
+                    {% csrf_token %}
+                    Antal varer </br>
+                    Bar
+                    <input type="number" name="valgbar.{{ ware.id }}"> </br>
+                    Lager
+                    <input type="number" name="valglager.{{ ware.id }}"></p></p>
+                        
+                {% endfor %}       
+                <input type=text value="Kommentar til åbning" name="kommentar">
+                <input type="submit" value="Gem"  /><br/><p/>
+            </form>
+            
+            
+    {% else %}
+        <p>Ingen varer tilgængelige eller baren allerede åben.</p>
+    {% endif %} 
+    {% endif %}
+

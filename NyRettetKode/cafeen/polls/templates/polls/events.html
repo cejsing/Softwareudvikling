@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <h1>cafféen</h1>
+    <h3>begivenheder</h3>
+        <form action="../">
+            <input type="submit" value="Tilbage"  />
+        </form> 
+    
+    
+
+    <h4>Skab ny begivenhed</h4>
+        <li>
+            <a href="/polls/events/skabny/">
+                Klik her
+            </a>
+        </li>
+    <h4>Ændr priser for begivenhed</h4>
+        <i>(Virker ikke - tilgå fra index)</i>
+        {% if allevents %}
+            
+            <form method="post">
+                {% csrf_token %}
+                <select name="event">
+                    {% for event in allevents %}
+                        <option value={{ event.id }}>{{ event }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" name="eventsubmit" value="Vælg"  />
+            </form>
+            
+        
+            
+                         
+        {% else %}
+                <i>Der er ingen begivenheder at ændre priser for</i>
+        {% endif %}
+            
+        
+    <h4>Vis historik over begivenheder</h4>
+        <li>
+            <a href="/polls/events/historik/">
+                Klik her
+            </a>
+        </li>
+    
+    <p/>
+    <h4>Oversigt over begivenheder</h4>
+    {% if allevents %}
+
+        <ul>
+        {% for event in allevents %}
+            <li>
+                <a href="/polls/events/{{ event.id }}/">
+                    {{ event }}
+                </a>
+            </li>
+            <p> event id#:  {{ event.id }} </p>
+        {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p>No events are available.</p>
+    {% endif %}
+        
+    
+    
+    <style></style>
+  </head>
+  <body></body>
+</html>

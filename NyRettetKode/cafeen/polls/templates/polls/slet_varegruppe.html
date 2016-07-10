@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    
+    {% if message.0 %}
+        {{message.0}}
+    
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+            Er du sikker på, at du vil slette denne varegruppe og dens oplysninger?</p>
+            <input type="submit" name="slet" value="Slet"  />
+        </form> 
+
+    {% endif %}
+    <form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+    
+    <style></style>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    
+    <form action="../../">
+    Tilbage til oversigt:<br>
+    <input type="submit" value="Tilbage"  />
+    </form> 
+    
+    <form action="../">
+    Tilbage til begivenheder:<br>
+    <input type="submit" value="Tilbage"  />
+    </form> 
+
+    
+    <b>Historik for begivenheders navne:</b></p>
+    {% if alleventnames %}
+    
+        
+        {% for element in alleventnames %}
+            Begivenhed #{{element.eventid}} hedder nu: "{{element.eventname}}"<br></br>
+        {% endfor %}
+
+    {% else %}
+        <p><i>Der er ikke skabt nogen begivenheder endnu</i></p>
+        
+    {% endif %}
+    
+    <b>Historik for begivenheders ekstra oplysninger:</b></p>
+    {% if alleventinfos %}
+        
+        {% for element in alleventinfos %}
+            Begivenhed #{{element.eventid}} har nu oplysningen: "{{element.eventinfo}}"<br></br>
+        {% endfor %}
+    
+    {% else %}
+        <p><i>Der er ikke tilføjet nogen ekstra oplysninger til begivenheder</i></p>
+    
+    {% endif %}
+    
+    <b>Historik for begivenhedernes sletninger:</b></p>
+    {% if alleventdeletes %}
+    
+        {% for element in alleventdeletes %}
+            Begivenhed #{{element.eventid}} blev slettet på <i>{{element.pub_date}}</i><br></br>
+        {% endfor %}
+    
+    {% else %}
+        <p><i>Der er ikke foretaget nogen sletninger af begivenheder</i></p>
+        
+    {% endif %}
+    
+    
+    <form action="../">
+    Tilbage til begivenheder:<br>
+    <input type="submit" value="Tilbage"  />
+    </form> 
+
+    <form action="../../">
+    Tilbage til oversigt:<br>
+    <input type="submit" value="Tilbage"  />
+    </form> 
+    
+    
+    <style></style>
+  </head>
+  <body></body>
+</html>

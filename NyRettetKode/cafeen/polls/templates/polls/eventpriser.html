@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Skift pris for varegrupper for en begivenhed</title>
+    <meta content="">
+   
+    <form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+
+    <h1>Begivenhedspriser for varegrupper</h1>
+
+    <h2> {{event}} </h2>
+
+    <h4> Vigtigt! Tryk på change for hver ændring </h4>
+    <small> Hvis man udfylder flere felter samtidigt vil kun den aktuelle ændres</small></p>
+
+    {% if message %}
+        Beskeder fra systemet:</p> 
+        {% for element in message%}
+            {{forloop.counter}}: {{element}}</p>
+        {%endfor%}
+    {% else %}    
+       
+    {% endif %}
+    
+    
+    {% if inputlist %}
+
+            <i>(negative værdier accepteres også)</i>
+            {% for element in inputlist %}
+        <form method="post"">
+            {% csrf_token %}
+            {{element.1}}: 
+                skal være {{element.0}} dyrere 
+                <input type="submit" name="{{element.2}}" value="Change"/></p>
+                </form>
+            {% endfor %}
+         
+    {% else %}
+        Man må ikke ændre priser for en åben bar</p>
+    {% endif %}
+
+
+    <form action="../../">
+            Tilbage til oversigt:<br>
+            <input type="submit" value="Tilbage"  />
+    </form> 
+
+
+    <style></style>
+  </head>
+  <body></body>
+</html>

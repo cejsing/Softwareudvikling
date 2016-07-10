@@ -1,0 +1,19 @@
+<html>
+    <a href="../">
+        Tilbage til oversigten
+    </a>
+    <p/>
+
+
+    {% if allwares %}
+
+        <ul>
+        {% for ware in allwares %}
+            {{ ware }} <p/>
+        {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %} 
+</html>

@@ -1,0 +1,68 @@
+<html>
+    
+    <html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    
+    <form action="../">
+    Tilbage til oversigt:<br>
+    <input type="submit" value="Tilbage"  />
+    </form> 
+
+    
+    <b>Historik for vareantal i baren:</b></p>
+    {% if allbar %}
+    
+        
+        {% for element in allbar %}
+            Varen #{{element.wareid}} har nu <b>{{element.inbar}}</b> stk i baren<br></br>
+        {% endfor %}
+        <p></p>
+    {% else %}
+        <p><i>Der er ikke tilføjet varer til baren endnu</i></p>
+        
+    {% endif %}
+    
+    <b>Historik for vareantal på lager:</b></p>
+    {% if allstock %}
+        
+        {% for element in allstock %}
+            Varen #{{element.wareid}} har nu <b>{{element.instockroom}}</b> stk på lager<br></br>
+        {% endfor %}
+        <p></p>
+    {% else %}
+        <p><i>Der er ikke tilføjet varer til baren endnu</i></p>
+    
+    {% endif %}
+    
+    <b>Historik for varesletninger:</b></p>
+    {% if alldeletes %}
+    
+        {% for element in alldeletes %}
+            Varen #{{element.wareid}} blev slettet på <i>{{element.pub_date}}</i><br></br>
+        {% endfor %}
+        <p></p>
+    {% else %}
+        <p><i>Der er ikke foretaget nogen sletninger af varer</i></p>
+        
+    {% endif %}
+    
+
+    <form action="../">
+    Tilbage til oversigt:<br>
+    <input type="submit" value="Tilbage"  />
+    </form> 
+    
+    
+    <style></style>
+  </head>
+  <body></body>
+</html>
+    
+    
+    
+    
+    
+</html>

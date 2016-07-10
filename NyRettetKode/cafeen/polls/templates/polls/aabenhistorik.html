@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <form action="../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+    <title></title>
+    <meta content="">
+    {% if allthings %}
+
+        {% for opening in allthings %}
+            {{ opening.pub_date }}  
+            blev der <b>{{ opening }}</b> for en 
+            <b>{{ opening.event }}</b> </p>
+            {% if opening %}
+                Begivenheden havde kommentaren: "{{opening.comments}}"</p>
+            {% endif %}    
+        {% endfor %}
+    
+        {% else %}
+            <p>No history of openings yet</p>
+    {% endif %}
+    <style></style>
+    <form action="../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+  </head>
+  <body></body>
+</html>

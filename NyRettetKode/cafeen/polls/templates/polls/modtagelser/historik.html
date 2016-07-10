@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+
+    {% if allthings %}
+
+        {% for stocking in allthings %}
+            {{ stocking.pub_date }}  
+            blev der {{ stocking }} </p>
+        {% endfor %}
+    
+    {% else %}
+        <p>No history of restocking yet</p>
+    {% endif %}
+
+    <form action="../../">
+        Tilbage til oversigt:<br>
+        <input type="submit" value="Tilbage"  />
+    </form> 
+  
+</html>
+    
+    <style></style>
+  </head>
+  <body></body>
+</html>
