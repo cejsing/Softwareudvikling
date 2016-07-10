@@ -1,10 +1,10 @@
 <title>Caféen - Varehåndtering for {{ware}}</title>
 
 <h1>{{ ware }}</h1>
-id#: {{ ware.id }} <p>
-inbar: {{ ware.inbar }} <p>
-instockroom: {{ ware.instockroom }} <p>
-standardprice: {{ ware.standardprice}} <p>
+ID #{{ ware.id }} <p>
+Antal i bar: {{ ware.inbar }} <p>
+Antal på lager: {{ ware.instockroom }} <p>
+Standardpris: {{ ware.standardprice}}kr. <p>
 
 Varegruppe valgt: <a href="/polls/varegruppe/{{ waregroup.id }}/"> {{waregroup}}</a>
 
@@ -21,7 +21,7 @@ Varegruppe valgt: <a href="/polls/varegruppe/{{ waregroup.id }}/"> {{waregroup}}
 
   {% csrf_token %}
   {{form.as_p}}
-  <input type="submit" value="Change"  />
+  <input type="submit" value="Gem"  />
   
 </form> 
 
@@ -33,6 +33,5 @@ Varegruppe valgt: <a href="/polls/varegruppe/{{ waregroup.id }}/"> {{waregroup}}
 
 
 <form action="../">
-  Tilbage til oversigt:<br>
   <input type="submit" value="Tilbage"  />
 </form> 

@@ -43,10 +43,10 @@ class PriceForm(forms.Form):
     
 class WareForm(forms.Form):
     wareid = 0
-    name = forms.CharField(label='Name of ware?', max_length=100, required=False)
-    inbar = forms.IntegerField(label='How much in bar?', required=False)
-    instock = forms.IntegerField(label='How much in stockroom?', required=False)
-    price = forms.IntegerField(label='What is the standardprice?', required=False)
+    name = forms.CharField(label='Varenavn', max_length=100, required=False)
+    inbar = forms.IntegerField(label='Antal i bar', required=False)
+    instock = forms.IntegerField(label='Antal på lager', required=False)
+    price = forms.IntegerField(label='Standardpris', required=False)
     waregroup = forms.ModelChoiceField(queryset=Waregroups.objects.all(), required=False, empty_label="Intet valgt", label="Varegruppe")
     
     def change_wareid(self, wareid):

@@ -3,8 +3,8 @@
     <title></title>
     <meta content="">
         <h1>{{ event }}</h1>
-        id#: {{ event.id }} <p>
-        info: {{ event.eventinfo }} <p>
+        ID #{{ event.id }} <p>
+        Info: {{ event.eventinfo }} <p>
 
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -12,28 +12,27 @@
     <form method="post" action="{% url 'polls:eventdetail' event.id %}">
 
         {% csrf_token %}
-        vælg navn:<br>
+        Nyt navn:<br>
         <input type="text" name="valgnavn"><br>
-        <input type="submit" value="Change"  />
+        <input type="submit" value="Gem"  />
     </form>         
 
     <form method="post" action="{% url 'polls:eventdetail' event.id %}">    
         {% csrf_token %}
-        vælg info:<br>
+        Ny info:<br>
         <input type="text" name="valginfo"><br>
 
-        <input type="submit" value="Change"  />
+        <input type="submit" value="Gem"  />
     </form> 
     
     <form action="{% url 'polls:eventdelete' event.id %}">
-        <p> Slet begivenhed her:</br>
         <input type="submit" value="Slet begivenhed"  />
         </p>  
     </form> 
     
     
     <form action="../">
-    Naviger tilbage på siden her:</br>    
+
         <input type="submit" value="Tilbage til begivenheder"  />
     </form> 
     
