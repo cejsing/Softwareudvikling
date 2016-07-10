@@ -7,8 +7,7 @@
     <h3> Varemodtagelse: {{ event }} </h3> </p>
      
     <form action="../../">
-        Tilbage til oversigt:<br>
-        <input type="submit" value="Tilbage"  />
+        <input type="submit" value="Tilbage til Oversigt"  />
     </form> 
     {% if message %}
         <b>Beskeder fra systemet:</p></b>
@@ -22,20 +21,23 @@
         {% csrf_token %}
             {% for ware in allwares %}
                 {{ ware }}</br> 
-                wareid#:  {{ ware.id }} </br>
+                VareID #{{ ware.id }} </br>
 
-                vælg barantal:
+                Antal i baren
                 <input type="number" value="0" name="valgbar.{{ ware.id }}">
 
-                vælg lagerantal:
+                Antal på lageret
                 <input type="number" value="0" name="valglager.{{ ware.id }}"></p></p>
                         
             {% endfor %}       
-            <input type="submit" value="Change"  /><br/><p/>
+            <input type="submit" value="Gem"  /><br/><p/>
         </form>
     {% else %}
         <p>Ingen varer tilgængelige eller baren allerede åben.</p>
-    {% endif %} 
+    {% endif %}
+       <form action="../../">
+        <input type="submit" value="Tilbage til Oversigt"  />
+    </form>
 
     <style></style>
   </head>

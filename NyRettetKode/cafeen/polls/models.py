@@ -134,7 +134,7 @@ class Waresnamehistory(models.Model):
     warename = models.CharField(max_length=200)
 
     def __str__(self):
-        information = "ID: " + str(self.wareid) + " now has the name ' " + self.warename + "'"
+        information = "Vare med ID #" + str(self.wareid) + " har nu navnet ' " + self.warename + "'"
         return information
     
     def insert(warid):
@@ -159,7 +159,7 @@ class Waresinbarhistory(models.Model):
     inbar = models.IntegerField(default=0)
     
     def __str__(self):
-        information = "ID: " + str(self.wareid) + " now has " + str(self.inbar) + " in the bar"
+        information = "Vare med ID #" + str(self.wareid) + ", navn" + self.warename + " har " + str(self.inbar) + " varer i baren"
         return information
     
     def insert(warid):
@@ -180,7 +180,7 @@ class Waresinstockhistory(models.Model):
     
     # Makes object return a string, instead of 'OBJECT'
     def __str__(self):
-        return "Ware with id#: " + str(wareid) + " has " + str(instockroom) + " in stock"
+        return "Vare med ID #" + str(wareid) + " har " + str(instockroom) + " varer på lager"
 
     
     def insert(warid):
@@ -200,7 +200,7 @@ class Waresstdpricehistory(models.Model):
     standardprice = models.IntegerField(default=0)
     
     def __str__(self):
-        information = "ID: " + str(self.wareid) + " is now priced at " + str(self.standardprice)
+        information = "Vare med ID #" + str(self.wareid) + " koster nu " + str(self.standardprice) + " kr. "
         return information
     
     
@@ -221,7 +221,7 @@ class Waresdeletehistory(models.Model):
 
     # Makes object return a string, instead of 'OBJECT'
     def __str__(self):
-        return "Ware with id#: " + str(wareid) + " deleted"
+        return "Vare med ID #" + str(wareid) + " er nu slettet"
 
     def insert(warid):
         ware = Wares.getthis(warid)
