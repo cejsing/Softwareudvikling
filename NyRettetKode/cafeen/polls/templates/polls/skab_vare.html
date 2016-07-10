@@ -1,3 +1,6 @@
+<html>
+    <h2>Opret ny vare</h2>
+
 {% if error %}
 
 <b> Du skal huske at indtaste et navn </b>
@@ -7,7 +10,7 @@
 <form method="post">
 {% csrf_token %}
 
-  vælg navn:<br>
+  Nyt navn:<br>
   <input type="text" name="valgnavn"><br>
   Skal åbne varer registreres (f.eks. sprutflasker)?</br>
   <input type="checkbox" name="ja" value="ja"> Ja<br>
@@ -18,7 +21,6 @@
 
 
 <form action="../">
-
-  Tilbage til oversigt:<br>
-  <input type="submit" value="Tilbage"  />
-</form> 
+  <input type="submit" value="Tilbage til Oversigt"  />
+</form>
+</html>

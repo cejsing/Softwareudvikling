@@ -1,34 +1,51 @@
 <html>
-    <title>Caféen</title>
-    <h1>Caféen</h1>
+    <title>Caféen?</title>
+    <h1>Caféen?</h1>
     
     <h3> Optællinger </h3>
-    
-    <a href="/polls/aabenhistorik/">
-        Vis tidligere optællinger
-    </a>
-    
+
+     Åben Caféen?
+    {% if allevents %}
+
+            <form method="post">
+                {% csrf_token %}
+                <select name="event">
+                    {% for event in allevents %}
+                        <option value={href=/polls/Aaben/{{ event.id }}/}>{{ event }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" name="eventsubmit" value="Vælg"  />
+            </form>
+
+        {% else %}
+                <i>Der er ingen begivenheder at ændre priser for</i>
+        {% endif %}
     {% if allevents %}
 
         <ul>
         {% for event in allevents %}
             <li>
                 <a href="/polls/Aaben/{{ event.id }}/">
-                        Åben Caféen for {{ event }}
+
+                        Åben Caféen? for {{ event }}
                 </a>
             </li>
         {% endfor %}
         </ul>
-    
+
     {% else %}
         <p>Man skal have en begivenhed for at kunne åbne </p>
     {% endif %}
-    
 
     <p/>
     <a href="/polls/Luk/">
-        Luk Caféen
+        Luk Caféen?
+    </a> <br>
+
+    <a href="/polls/aabenhistorik/">
+        Vis tidligere optællinger
     </a>
+
     
     <h3> Varemodtagelse </h3>
     
@@ -147,8 +164,8 @@
                     {{ ware }}
                 </a>
             </li>
-            <p> wareid#:  {{ ware.id }} </p>
-            <p> pris:  {{ ware.standardprice }} </p>
+            <p> VareID #{{ ware.id }} </p>
+            <p> Pris:  {{ ware.standardprice }}kr. </p>
         {% endfor %}
         </ul>
     

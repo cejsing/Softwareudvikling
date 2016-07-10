@@ -1,26 +1,16 @@
 <html>
-  <head>
-    <title></title>
-    <meta content="">
-    
+    <h2>Opret ny varegruppe</h2>
     <form method="post">
     {% csrf_token %}
 
-    vælg navn:<br>
+    Nyt navn:<br>
     <input type="text" name="valgnavn"><br>
-    <input type="submit" value="Change"  /><br>
+    <input type="submit" value="Gem"  /><br>
     </form>  
 
 
-    <form action="../../">
-    
-    Tilbage til oversigt:<br>
-    <input type="submit" value="Tilbage"  />
-    </form> 
+<form action="../">
+  <input type="submit" value="Tilbage til Oversigt"  />
+</form>
 
-    
-    
-    <style></style>
-  </head>
-  <body></body>
 </html>

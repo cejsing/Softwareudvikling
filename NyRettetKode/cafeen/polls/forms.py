@@ -46,7 +46,7 @@ class WareForm(forms.Form):
     name = forms.CharField(label='Varenavn', max_length=100, required=False)
     inbar = forms.IntegerField(label='Antal i bar', required=False)
     instock = forms.IntegerField(label='Antal på lager', required=False)
-    price = forms.IntegerField(label='Standardpris', required=False)
+    price = forms.IntegerField(label='Standardpris (kr.)', required=False)
     waregroup = forms.ModelChoiceField(queryset=Waregroups.objects.all(), required=False, empty_label="Intet valgt", label="Varegruppe")
     
     def change_wareid(self, wareid):
@@ -104,8 +104,8 @@ class WareForm(forms.Form):
     
 class WaregroupForm(forms.Form):    
     wgid = 0
-    name = forms.CharField(label='Varegruppens navn: ', max_length=100, required=False)
-    info = forms.CharField(label='Beskrivelse af varegruppe: ', max_length=100, required=False)
+    name = forms.CharField(label='Varegruppens nye navn: ', max_length=100, required=False)
+    info = forms.CharField(label='Ny beskrivelse af varegruppe: ', max_length=100, required=False)
     
     def change_wgid(self, wgid):
         self.wgid = wgid
@@ -137,7 +137,7 @@ class WaregroupForm(forms.Form):
 #TODO: Make it work!
 class WaregrouppriceForm(forms.Form):    
     wgid = 0
-    price = forms.IntegerField(label='What is the standardprice?', required=True)
+    price = forms.IntegerField(label='Ny standardpris', required=True)
     
     
     def change_wgid(self, wgid):

@@ -3,8 +3,7 @@
     <title></title>
     <meta content="">
         <form action="../">
-            Tilbage til oversigt:<br>
-            <input type="submit" value="Tilbage"  />
+            <input type="submit" value="Tilbage til Oversigt"  />
         </form> 
 
         {% if message %}
@@ -16,19 +15,19 @@
             {% if allwares %}
                 {% for ware in allwares %}
                     {{ ware }}</br> 
-                    wareid#:  {{ ware.id }} </br>
-                    pris:  {{ ware.standardprice }} </br>
+                    VareID #{{ ware.id }} </br>
+                    Pris: {{ ware.standardprice }}kr. </br>
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        vælg barantal:
+                        Antal i baren
                         <input type="number" name="valgbar.{{ ware.id }}">
 
-                        vælg lagerantal:
+                        Antal på lager
                         <input type="number" name="valglager.{{ ware.id }}"></p></p>
                         
                 {% endfor %}       
-                    <input type=text value="kommentarer her" name="kommentar">
-                    <input type="submit" value="Change"  /><br/><p/>
+                    <input type=text value="Kommentar til lukning" name="kommentar">
+                    <input type="submit" value="Gem"  /><br/><p/>
                     </form>
             {% else %}
                 <p>Ingen varer tilgængelige eller baren allerede lukket.</p>

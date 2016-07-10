@@ -4,15 +4,14 @@
     <meta content="">
    
     <form action="../../">
-        Tilbage til oversigt:<br>
         <input type="submit" value="Tilbage"  />
     </form> 
 
-    <h1>Begivenhedspriser for varegrupper</h1>
+    <h1>Priser for varegrupper</h1>
 
     <h2> {{event}} </h2>
 
-    <h4> Vigtigt! Tryk på change for hver ændring </h4>
+    <h4> Vigtigt! Tryk på "Gem" for hver ændring </h4>
     <small> Hvis man udfylder flere felter samtidigt vil kun den aktuelle ændres</small></p>
 
     {% if message %}
@@ -31,19 +30,18 @@
             {% for element in inputlist %}
         <form method="post"">
             {% csrf_token %}
-            {{element.1}}: 
-                skal være {{element.0}} dyrere 
-                <input type="submit" name="{{element.2}}" value="Change"/></p>
+           <h4> {{element.1}} </h4>
+                skal være {{element.0}} kr. dyrere
+                <input type="submit" name="{{element.2}}" value="Gem"/></p>
                 </form>
             {% endfor %}
          
     {% else %}
-        Man må ikke ændre priser for en åben bar</p>
+        Man må ikke ændre priser, når baren er åben!</p>
     {% endif %}
 
 
     <form action="../../">
-            Tilbage til oversigt:<br>
             <input type="submit" value="Tilbage"  />
     </form> 
 

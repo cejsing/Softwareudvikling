@@ -1,13 +1,16 @@
+<html>
+    <h2>Opret ny begivenhed</h2>
+
 <form method="post">
 {% csrf_token %}
 
-  vælg navn:<br>
+  Vælg navn:<br>
   <input type="text" name="valgnavn"><br>
-  <input type="submit" value="Change"  /><br>
+  <input type="submit" value="Gem"  /><br>
 </form>  
 
 
 <form action="../">
-  Tilbage til oversigt:<br>
-  <input type="submit" value="Tilbage"  />
-</form> 
+  <input type="submit" value="Tilbage til Begivenheder"  />
+</form>
+</html>

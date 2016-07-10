@@ -2,8 +2,8 @@
   <head>
     <title></title>
     <meta content="">
-    <h1>cafféen</h1>
-    <h3>begivenheder</h3>
+    <h1>Caféen?</h1>
+    <h3>Begivenheder</h3>
         <form action="../">
             <input type="submit" value="Tilbage"  />
         </form> 
@@ -56,12 +56,12 @@
                     {{ event }}
                 </a>
             </li>
-            <p> event id#:  {{ event.id }} </p>
+            <p> Event ID #{{ event.id }} </p>
         {% endfor %}
         </ul>
     
     {% else %}
-        <p>No events are available.</p>
+        <p>Der er ingen begivenheder tilgængelige</p>
     {% endif %}
         
     

@@ -1,4 +1,4 @@
-<title>Caféen - Varegruppehåndtering for {{waregroup}} </title>
+<title>Caféen? - Varegruppehåndtering for {{waregroup}} </title>
 
 <h1>Detaljer for "{{ waregroup }}"</h1>
 
@@ -15,7 +15,7 @@
         </ul>
     
     {% else %}
-        <p> Der er ingen vare i denne varegruppe </p>
+        <p> Der er ingen varer i denne varegruppe </p>
 {% endif %}
 
 
@@ -24,22 +24,17 @@ Oplysninger: {{waregroup.wginfo}}</p>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 
-
-
-
-
-
 <form method="post" action="{% url 'polls:wgdetail' waregroup.id %}">
 
   {% csrf_token %}
   {{form.as_p}}
-  <input type="submit" value="Change"  />
+  <input type="submit" value="Gem"  />
   
 </form> 
 
 
 <form action="{% url 'polls:wgpris' waregroup.id %}">
-  Skift pris for alle vare i varegruppen<br>
+  Skift pris for alle varer i varegruppen<br>
   <input type="submit" value="Skift standardpris"  />
 </form> 
 
@@ -51,6 +46,5 @@ Oplysninger: {{waregroup.wginfo}}</p>
 </form> 
 
 <form action="../../">
-  Tilbage til oversigt:<br>
-  <input type="submit" value="Tilbage"  />
+  <input type="submit" value="Tilbage til Oversigt"  />
 </form> 

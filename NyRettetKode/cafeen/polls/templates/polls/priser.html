@@ -1,6 +1,5 @@
 <form action="../../">
-        Tilbage til oversigt:<br>
-        <input type="submit" value="Tilbage"  />
+        <input type="submit" value="Tilbage til oversigt"  />
 </form> 
 
 <h2> {{event}} </h2>
@@ -8,17 +7,16 @@
     {% if groupedelements %}
     {% for element in groupedelements %}
         <b>{{element.0}}</b> </br>
-        Id#: {{element.1}}
-        I baren: {{element.2}}
-        På lager: {{element.3}}
-        Normalpris: {{element.4}}</br>
-        Pris nu: <b>{{element.5}}</b></p></p>
+        ID #{{element.1}}
+        Antal i baren: {{element.2}}
+        Antal på lager: {{element.3}}
+        Normalpris: {{element.4}}kr.</br>
+        Ny pris: <b>{{element.5}}kr.</b></p></p>
         
     {% endfor %}
 {% endif %}
 
 
 <form action="../../">
-        Tilbage til oversigt:<br>
-        <input type="submit" value="Tilbage"  />
+        <input type="submit" value="Tilbage til Oversigt"  />
 </form> 
