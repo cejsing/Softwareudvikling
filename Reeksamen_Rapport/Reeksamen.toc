@@ -1,0 +1,61 @@
+\select@language {danish}
+\contentsline {section}{\numberline {1}Projektbeskrivelse}{1}
+\contentsline {section}{\numberline {2}Krav}{2}
+\contentsline {subsection}{\numberline {2.1}User stories}{3}
+\contentsline {subsection}{\numberline {2.2}Use cases}{4}
+\contentsline {section}{\numberline {3}Design}{6}
+\contentsline {subsection}{\numberline {3.1}Filstruktur i applikationen}{6}
+\contentsline {subsection}{\numberline {3.2}Kodens struktur}{6}
+\contentsline {subsection}{\numberline {3.3}Overvejelser omkring koden}{7}
+\contentsline {subsection}{\numberline {3.4}Design/analyse - Forholdet mellem backend og frontend}{7}
+\contentsline {subsection}{\numberline {3.5}Design/analyse - Priser}{8}
+\contentsline {subsubsection}{Uafh\IeC {\ae }ngige priser}{8}
+\contentsline {subsubsection}{Standardbegivenheden}{8}
+\contentsline {subsubsection}{Varespecifiseret standardpris}{9}
+\contentsline {subsubsection}{Brugerflade}{9}
+\contentsline {subsubsection}{Varegruppe- eller blot varespecifiseret priser}{9}
+\contentsline {subsection}{\numberline {3.6}Design/analyse - H\IeC {\r a}ndtering af sprut}{9}
+\contentsline {subsubsection}{Underklasse}{9}
+\contentsline {subsubsection}{Ekstra felter}{10}
+\contentsline {subsubsection}{Oprettelse af (\IeC {\r a}ben) varen}{10}
+\contentsline {subsection}{\numberline {3.7}Design/analyse - H\IeC {\r a}ndtering af vare\IeC {\ae }ndringer bagudvendt}{11}
+\contentsline {subsubsection}{Fil med \IeC {\ae }ndring}{11}
+\contentsline {subsubsection}{Tabeller med \IeC {\ae }ndringer}{11}
+\contentsline {subsubsection}{Felt historik}{11}
+\contentsline {section}{\numberline {4}Afpr\IeC {\o }vning}{11}
+\contentsline {subsection}{\numberline {4.1}Overordnede overvejelser for afpr\IeC {\o }vning}{12}
+\contentsline {subsection}{\numberline {4.2}Automatiserede tests}{12}
+\contentsline {subsection}{\numberline {4.3}Manuelle tests}{13}
+\contentsline {subsection}{\numberline {4.4}Brugerfladetests}{13}
+\contentsline {subsection}{\numberline {4.5}Debugging case 1}{14}
+\contentsline {subsection}{\numberline {4.6}Debugging case 2}{14}
+\contentsline {section}{\numberline {5}Udviklingsmilj\IeC {\o }}{15}
+\contentsline {subsection}{\numberline {5.1}Underliggende teknologi}{15}
+\contentsline {subsection}{\numberline {5.2}Brug af v\IeC {\ae }rkt\IeC {\o }jer}{16}
+\contentsline {section}{\numberline {6}Proces}{17}
+\contentsline {subsection}{\numberline {6.1}Er der kodet agilt?}{17}
+\contentsline {subsubsection}{Konklussion:}{19}
+\contentsline {subsection}{\numberline {6.2}Kundekontakt}{19}
+\contentsline {subsection}{\numberline {6.3}Gruppearbejde kronologi}{19}
+\contentsline {subsubsection}{Process op til D1}{19}
+\contentsline {subsubsection}{Feedback for D1}{19}
+\contentsline {subsubsection}{Arbejde omkring p\IeC {\r a}ske}{20}
+\contentsline {subsubsection}{Arbejde omkring 'blok 3'-eksamener}{20}
+\contentsline {subsubsection}{Arbejde i blok 4}{20}
+\contentsline {section}{\numberline {7}Diskussion}{21}
+\contentsline {subsection}{\numberline {7.1}Manglende gruppemedlem}{21}
+\contentsline {subsection}{\numberline {7.2}Manglende brug af undervisning}{21}
+\contentsline {subsection}{\numberline {7.3}Reviews}{22}
+\contentsline {subsection}{\numberline {7.4}Fordeling af opgaver i gruppen}{22}
+\contentsline {subsection}{\numberline {7.5}Mailkorrespondance med kunden}{23}
+\contentsline {subsection}{\numberline {7.6}Git}{24}
+\contentsline {subsection}{\numberline {7.7}Krav}{24}
+\contentsline {subsection}{\numberline {7.8}Parprogrammering}{25}
+\contentsline {subsubsection}{Ordin\IeC {\ae }rt forl\IeC {\o }b}{25}
+\contentsline {subsubsection}{Reeksamen}{25}
+\contentsline {subsection}{\numberline {7.9}Inspektion}{25}
+\contentsline {subsection}{\numberline {7.10}Korte iterationer}{25}
+\contentsline {section}{\numberline {A}Oversigt over delafleveringer}{26}
+\contentsline {section}{\numberline {B}GitHub-oversigt}{26}
+\contentsline {section}{\numberline {C}Reviews}{26}
+\contentsline {section}{\numberline {D}Mailkorrespondance}{27}
