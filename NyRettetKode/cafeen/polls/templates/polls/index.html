@@ -7,21 +7,6 @@
      Åben Caféen?
     {% if allevents %}
 
-            <form method="post">
-                {% csrf_token %}
-                <select name="event">
-                    {% for event in allevents %}
-                        <option value={href=/polls/Aaben/{{ event.id }}/}>{{ event }}</option>
-                    {% endfor %}
-                </select>
-                <input type="submit" name="eventsubmit" value="Vælg"  />
-            </form>
-
-        {% else %}
-                <i>Der er ingen begivenheder at ændre priser for</i>
-        {% endif %}
-    {% if allevents %}
-
         <ul>
         {% for event in allevents %}
             <li>

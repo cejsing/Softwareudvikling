@@ -8,28 +8,28 @@ class Noopeningsyet(Exception):
      def __init__(self):
          return
      def __str__(self):
-         return 'you need to open the bar at least once' 
+         return 'Baren skal åbnes'
 
 
 class Alreadyopen(Exception):
      def __init__(self):
          return
      def __str__(self):
-         return 'the bar is already open' 
+         return 'Baren er allerede åben'
 
 
 class Alreadymade(Exception):
      def __init__(self):
          return
      def __str__(self):
-         return 'The same relation cannot be made twice' 
+         return 'Denne relation eksisterer allerede'
 
 
 class Alreadyclosed(Exception):
     def __init__(self):
          return
     def __str__(self):
-         return 'the bar is already closed' 
+         return 'Baren er allerede lukket'
      
      
      

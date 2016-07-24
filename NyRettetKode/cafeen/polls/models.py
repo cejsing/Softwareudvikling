@@ -454,7 +454,7 @@ class Waresingroup(models.Model):
     waregroup = models.ForeignKey("Waregroups", on_delete=models.CASCADE)
     
     def __str__(self):
-        return "ware id: " + str(self.ware.id) + " with warename: " + self.ware.warename + " and waregroup-id: " +  str(self.waregroup.id) + " with groupname: " + self.waregroup.wgname
+        return "Vare ID #" + str(self.ware.id) + " med varenavn " + self.ware.warename + " og varegruppe ID #" +  str(self.waregroup.id) + " med varegruppenavn" + self.waregroup.wgname
 
     # else should be a raise exception
     def insert(wareid,wgid):
@@ -536,7 +536,7 @@ class Pricesinevent(models.Model):
     price = models.IntegerField(default=0) #This represents the difference to the standardprice  
 
     def __str__(self):
-        return "ware id: " + str(self.ware.id) + " with warename: " + self.ware.warename + " and event-id: " +  str(self.event.id) + " with name: " + self.event.eventname + " and price: " + str(self.price)
+        return "Vare med ID #" + str(self.ware.id) + "og varenavn " + self.ware.warename + " og begivenhed ID # " +  str(self.event.id) + " med navnet" + self.event.eventname + " og pris" + str(self.price) + "kr."
     
     #else should raise exception
     def insert(wareid,eventid):

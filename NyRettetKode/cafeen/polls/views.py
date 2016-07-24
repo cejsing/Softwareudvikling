@@ -453,7 +453,7 @@ def nymodtagelse(request):
     if (truthval):
         #TODO: make it distinct if there are no wares or bar is open
         allwares = Wares.objects.all().filter(id=0)
-        message.append("cannot restock while bar is open")
+        message.append("Varemodtagelse er ikke muligt med åben bar")
         context = {'allwares': allwares, 'message': message}
     else:
         allwares = Wares.objects.all()

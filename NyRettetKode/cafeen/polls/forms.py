@@ -169,7 +169,7 @@ class GroupeventpriceForm(forms.Form):
     def clean_price(self):
         price = self.cleaned_data['price']
         if (price == None):
-            print("no price for wg: " + str(self.wgid) + " and ev: " + str(self.eventid))
+            print("Ingen pris for varegruppe med ID #" + str(self.wgid) + " og begivenhed med ID #" + str(self.eventid))
         else:
             if self.wgid == 0:
                 raise MyError("wgid ikke initialiseret i form")
