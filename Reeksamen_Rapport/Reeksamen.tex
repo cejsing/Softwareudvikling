@@ -121,7 +121,7 @@ escapechar=\&
 \fbox{
 \begin{minipage}{\textwidth}
 \vspace*{0.3cm}
-Denne rapport er baseret på en tidligere rapport, som blev skrevet i samarbejde med gruppemedlemmerne Nicolai Manique (jpm235@alumni.ku.dk) og Søren L. Nissen (rhc148@alumni.ku.dk) (tidligere gruppe C6) og kan ses som et forsøg på forbedring af denne. Nogle af elementerne er derfor meget ens eller identiske. Den tilhørende kode er ligeledes udarbejdet i samarbejde med ovenstående. Figurerne \ref{fig:fileStrk}, \ref{fig:database} og \ref{fig:Change} er ikke ændret fra den tidligere rapport.
+Denne rapport er baseret på en tidligere rapport, som blev skrevet i samarbejde med gruppemedlemmerne Nicolai Manique (jpm235@alumni.ku.dk) og Søren L. Nissen (rhc148@alumni.ku.dk) og kan ses som et forsøg på forbedring af denne. Vi udgjorde den forhenværende gruppe C6, hvor instruktorerne var Alexander Winther Uldall og Sven Uhrenholdt Frenzel. Nogle af elementerne er derfor meget ens eller identiske. Den tilhørende kode er ligeledes udarbejdet i samarbejde med ovenstående. Figurerne \ref{fig:fileStrk}, \ref{fig:database} og \ref{fig:Change} er ikke ændret fra den tidligere rapport.
 \vspace*{0.3cm}
 \end{minipage}} \vspace*{0.3cm}
 
@@ -174,7 +174,7 @@ For at kunne opskrive de kvalitative krav, har vi gennemgået projektbeskrivelse
 \end{itemize}
 
 \subsection{Funktionelle krav}
-Vi har lavet to use cases på fuld form, som beskrevet i \textbf{Cockburn} i afsnit \ref{UseCase1} og \ref{UseCase2}, og resten er lavet på kort form. Disse use cases tjener som de funktionelle krav, vores system skal kunne. \\ \\
+Vi har lavet to use cases på fuld form, som beskrevet i \textbf{Cockburn} \cite{cockburn1997structuring} i afsnit \ref{UseCase1} og \ref{UseCase2}, og resten er lavet på kort form. Disse use cases tjener som de funktionelle krav, vores system skal kunne. \\ \\
 I den agile proces udarbejdes use cases først på kort form. Ud fra disse use cases vælger kunden de use cases, der ønskes implementeret først. Disse use cases bliver undersøgt nærmere og sættes på fuld form, hvor den forventede tid brugt på den givne use case anslås. Man skal forsøge at planlægge på en sådan måde, at det er muligt at implementere de planlagte use cases i løbet af en enkelt iteration, som i vores tilfælde har været en måned. Det er på denne måde muligt at lave et del-release efter hver iteration, hvorved samarbejdet med kunden opretholdes og det er muligt løbende at sikre, at de kvalitative krav er overholdt. \\
 De use cases, der er skrevet på kort form kan ses i afsnit \ref{UseCasesShort}.
 \subsubsection{Use case - Tilføj vare} \label{UseCase1}
@@ -781,17 +781,17 @@ Vi har forsøgt ikke at tilføje funktionalitet, som kunden ikke har udtrykt øn
 & \textbf{Implementerede brugsscenarier} & \textbf{Designændringer}  \\ \hline
 1 & - Ingen. Der er her brugt tid på det indledende arbejde med opsætning, afklaring af krav & Her blev designet  \\
   & og udarbejdelse af use cases. & planlagt \\ \hline
-2 &	- Tilføj vare til systemet, hvor nøglebærer skal notere navn, standardpris (og varegruppe).& NIL \\
+2 &	- Tilføj vare til systemet, hvor nøglebærer skal notere navn, standardpris (og varegruppe).&  \\
 %  &  & \\
   & - Tilføj varegruppe, hvor nøglebærer skal notere navn og der kan tilføjes en beskrivelse, & \\
   & hvis ønsket. &  \\ \hline
-3 & - Tilføj vare til varegruppe, hvor brugeren kan ændre varens tilhørsgruppe ved at ændre & NIL \\
+3 & - Tilføj vare til varegruppe, hvor brugeren kan ændre varens tilhørsgruppe ved at ændre &  \\
   & information om den givne vare. & \\
   & - Ændre priser på en vare fremadrettet, hvor nøglebærer vælger vare, der skal ændres pris & \\
   & for. Den nye standardpris sættes. & \\
   & - Ændre information om vare, hvor nøglebærer vælger vare, der skal ændres pris for. Den & \\ 
   & nye information noteres. & \\ \hline
-4 & - Opret begivenhed med specificerede priser, hvor der oprettes en ny begivenhed, hvor & NIL \\
+4 & - Opret begivenhed med specificerede priser, hvor der oprettes en ny begivenhed, hvor &  \\
   & der noteres navn og prisændringer. & \\
   & - Åben med begivenhedsspecificerede priser, hvor 
   særlige begivenheder kan vælges ved & \\
@@ -800,8 +800,8 @@ Vi har forsøgt ikke at tilføje funktionalitet, som kunden ikke har udtrykt øn
   & historikken. & \\
   & - Optælling på seddel indtastes senere. Denne indtastning kan foregå som en almindelig & \\ 
   & eller hvilken som helst anden begivenhed, hvor der både skal åbnes og lukkes. &  \\ \hline
-5 & - Lager optælles ved åbning, hvor nøglebærer vælger ønsket begivenhed, hvor tomme & NIL \\
-  & felter skal udfyldes med antal i hhv. bar og på lager. & \\
+5 & - Lager optælles ved åbning, hvor nøglebærer vælger ønsket begivenhed, hvor tomme & Tilføj kommentar til \\
+  & felter skal udfyldes med antal i hhv. bar og på lager. & optællinger  \\
   & - Lager optælles ved lukning, hvor antal varer udfyldes i hhv. bar og på lager. & \\
   & - Håndtering af vægt af sprut. Ved åbning og lukning af registreres åbnings- og lukningsvægt. & \\
   & - Foretag varemodtagelse. Baren skal være lukket. Herfra kan informationer ændres & \\

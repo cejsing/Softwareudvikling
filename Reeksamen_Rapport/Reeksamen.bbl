@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{cockburn1997structuring}
+Alistair Cockburn.
+\newblock Structuring use cases with goals1.
+\newblock 1997.
+
 \bibitem{martin2006agile}
 R.C. Martin and M.~Martin.
 \newblock {\em Agile Principles, Patterns, and Practices in C\#}.
