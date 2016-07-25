@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{martin2006agile}
+R.C. Martin and M.~Martin.
+\newblock {\em Agile Principles, Patterns, and Practices in C\#}.
+\newblock Pearson Education, 2006.
+
+\bibitem{mcconnell2004code}
+S.~McConnell.
+\newblock {\em Code Complete}.
+\newblock Developer Best Practices. Pearson Education, 2004.
+
+\bibitem{DjangoDoc}
+Django~Software Foundation.
+
+\bibitem{fitzpatrick2012team}
+B.~Fitzpatrick and B.~Collins-Sussman.
+\newblock {\em Team Geek: A Software Developer's Guide to Working Well with
+  Others}.
+\newblock Oreilly and Associate Series. O'Reilly Media, Incorporated, 2012.
+
+\end{thebibliography}
